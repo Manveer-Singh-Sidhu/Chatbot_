@@ -1,3 +1,5 @@
+pip install streamlit
+pip install ai21
 import streamlit as st
 from ai21 import AI21Client
 from ai21.models.chat import ChatMessage
@@ -17,7 +19,8 @@ def func1(user_query):
         top_p=1.0 # Setting to 1 encourages different responses each call.
     )
   return response
- 
+
+
 Content = CaptureResponse.choices[0].message.content
 
 user_query = st.text_input("Ask me anything")
